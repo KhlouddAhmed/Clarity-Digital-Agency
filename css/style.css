@@ -1,30 +1,3 @@
-/* ==========================================================================
-   Clarity – custom styles (kept short; Bootstrap classes first)
-
-   CONTENTS
-   1.  Variables
-   2.  Base
-   3.  Helpers
-   4.  Buttons
-   5.  Shared components (cards, icon box, stat number, forms, carousel)
-   6.  Navbar
-   7.  Hero
-   8.  About
-   9.  Services
-   10. Portfolio
-   11. Why Us
-   12. Testimonials
-   13. Team
-   14. Contact
-   15. Footer
-   16. Scroll-to-top
-   17. Reduced motion
-   ========================================================================== */
-
-
-/* ==========================================================================
-   1. Variables
-   ========================================================================== */
 :root {
     --bg: #05071e;
     --surface: #131428;
@@ -37,7 +10,7 @@
 
 
 /* ==========================================================================
-   2. Base
+   Base
    ========================================================================== */
 html {
     scroll-behavior: smooth;
@@ -73,7 +46,7 @@ a:focus-visible {
 
 
 /* ==========================================================================
-   3. Helpers
+   Helpers
    ========================================================================== */
 .text-muted-2 {
     color: var(--muted) !important;
@@ -85,7 +58,7 @@ a:focus-visible {
 
 
 /* ==========================================================================
-   4. Buttons
+   Buttons
    ========================================================================== */
 .btn-primary {
     --bs-btn-bg: var(--accent);
@@ -125,7 +98,7 @@ a:focus-visible {
 
 
 /* ==========================================================================
-   5. Shared components
+   Shared components
    ========================================================================== */
 
 /* Cards */
@@ -197,7 +170,7 @@ a:focus-visible {
 
 
 /* ==========================================================================
-   6. Navbar
+   Navbar
    ========================================================================== */
 .site-nav {
     background: #1b1933;
@@ -230,6 +203,17 @@ a:focus-visible {
     color: #fff;
 }
 
+.site-nav .btn-primary {
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+.site-nav .btn-primary:hover {
+    background: color-mix(in srgb, var(--accent), transparent 15%);
+}
+
 @media (min-width: 992px) {
     .site-nav {
         border-radius: 50px;
@@ -242,7 +226,7 @@ a:focus-visible {
 
 
 /* ==========================================================================
-   7. Hero
+   Hero
    ========================================================================== */
 .hero {
     padding: 90px 0 60px;
@@ -255,9 +239,43 @@ a:focus-visible {
     line-height: 1.2;
 }
 
+/* hero buttons */
+.hero-buttons .btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.hero-buttons .btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.hero-buttons .btn-primary:hover {
+    background: color-mix(in srgb, var(--accent), black 10%);
+    border-color: color-mix(in srgb, var(--accent), black 10%);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.hero-buttons .btn-outline-primary {
+    background: transparent;
+    color: var(--accent);
+}
+
+.hero-buttons .btn-outline-primary:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
 
 /* ==========================================================================
-   8. About
+   About
    ========================================================================== */
 .about-wrap {
     position: relative;
@@ -293,7 +311,7 @@ a:focus-visible {
 
 
 /* ==========================================================================
-   9. Services
+   Services
    ========================================================================== */
 .badge-popular {
     background: linear-gradient(135deg, #ff6b6b, #ff8e53);
@@ -303,7 +321,7 @@ a:focus-visible {
 
 
 /* ==========================================================================
-   10. Portfolio
+   Portfolio
    ========================================================================== */
 .portfolio-img {
     height: 230px;
@@ -317,9 +335,31 @@ a:focus-visible {
     font-weight: 500;
 }
 
+/* portfolio call-to-action buttons (gradient + lift on hover) */
+.portfolio-cta .btn {
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: .925rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.portfolio-cta .btn-primary {
+    background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent), #4338ca 20%));
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 15px color-mix(in srgb, var(--accent), transparent 70%);
+}
+
+.portfolio-cta .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px color-mix(in srgb, var(--accent), transparent 60%);
+}
+
 
 /* ==========================================================================
-   11. Why Us
+   Why Us
    ========================================================================== */
 .check-box {
     width: 50px;
@@ -332,7 +372,7 @@ a:focus-visible {
 
 
 /* ==========================================================================
-   12. Testimonials
+   Testimonials
    ========================================================================== */
 .testimonial-card {
     position: relative;
@@ -376,7 +416,7 @@ a:focus-visible {
 
 
 /* ==========================================================================
-   13. Team
+   Team
    ========================================================================== */
 
 /* Part 1: organic-shape photos */
@@ -433,7 +473,7 @@ a:focus-visible {
 
 
 /* ==========================================================================
-   14. Contact
+   Contact
    ========================================================================== */
 
 /* Form card */
@@ -501,32 +541,71 @@ a:focus-visible {
 
 
 /* ==========================================================================
-   15. Footer
+   Footer
    ========================================================================== */
 footer {
     background: #01020e;
     border-top: 1px solid var(--border);
 }
 
-footer a {
-    color: var(--muted);
-    text-decoration: none;
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-footer a:hover {
+.footer-contact p {
+    margin-bottom: .35rem;
     color: #fff;
 }
 
+.footer-links h3 {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+}
+
+.footer-links li {
+    padding: .6rem 0;
+}
+
+.footer-links li:first-child {
+    padding-top: 0;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, .75);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #7f7bf0;
+}
+
 .social a {
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--border);
+    width: 55px;
+    height: 55px;
+    border: 1px solid rgba(255, 255, 255, .5);
     border-radius: 50%;
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.social a:hover {
+    color: #7f7bf0;
+    border-color: #7f7bf0;
+}
+
+footer .border-top {
+    border-color: var(--border) !important;
 }
 
 
 /* ==========================================================================
-   16. Scroll-to-top (plain link, no JavaScript)
+   Scroll-to-top
    ========================================================================== */
 .scroll-top {
     position: fixed;
@@ -547,7 +626,7 @@ footer a:hover {
 
 
 /* ==========================================================================
-   17. Reduced motion
+   Reduced motion
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
     html {

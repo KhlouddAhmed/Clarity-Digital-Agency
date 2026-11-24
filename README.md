@@ -82,6 +82,6 @@ Clarity-Digital-Agency/
 
 ## Author
 
-**YOUR NAME**
+**Khloud Ahmed**
 Course: Bootstrap | GDG on Campus, Canadian International College
 GitHub: [@KhlouddAhmed](https://github.com/KhlouddAhmed)
